@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clKeybord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clRowOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/b00"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/num_key"
+                android:fontFamily="@font/advent_pro_medium"
+                android:onClick="btn00"
+                android:text="@string/double_zero"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/b0"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/b0"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:fontFamily="@font/advent_pro_medium"
+                android:text="@string/zero"
+                android:onClick="btn0"
+                android:background="@drawable/num_key"
+                app:layout_constraintBaseline_toBaselineOf="@+id/b00"
+                app:layout_constraintEnd_toStartOf="@+id/bdot"
+                app:layout_constraintStart_toEndOf="@+id/b00" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bdot"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/num_key"
+                android:text="@string/dot"
+                android:onClick="btnDot"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/beq"
+                app:layout_constraintStart_toEndOf="@+id/b0" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/beq"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/op_key"
+                android:fontFamily="@font/advent_pro_medium"
+                android:text="@string/equal"
+                android:onClick="btnEqual"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/bdot"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/bdot" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clRowTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/clRowOne"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/b1"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/num_key"
+                android:fontFamily="@font/advent_pro_medium"
+                android:text="@string/one"
+                android:onClick="btn1"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/b2"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/b2"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:fontFamily="@font/advent_pro_medium"
+                android:text="@string/two"
+                android:onClick="btn2"
+                android:background="@drawable/num_key"
+                app:layout_constraintBaseline_toBaselineOf="@+id/b1"
+                app:layout_constraintEnd_toStartOf="@+id/b3"
+                app:layout_constraintStart_toEndOf="@+id/b1" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/b3"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:fontFamily="@font/advent_pro_medium"
+                android:text="@string/three"
+                android:onClick="btn3"
+                android:background="@drawable/num_key"
+                app:layout_constraintBaseline_toBaselineOf="@+id/b2"
+                app:layout_constraintEnd_toStartOf="@+id/bsum"
+                app:layout_constraintStart_toEndOf="@+id/b2" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bsum"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/op_key"
+                android:fontFamily="@font/advent_pro_medium"
+                android:text="@string/sum"
+                android:onClick="btnSum"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/b3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clRowThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/clRowTwo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/b4"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:fontFamily="@font/advent_pro_medium"
+                android:text="@string/four"
+                android:onClick="btn4"
+                android:background="@drawable/num_key"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/b5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/b5"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:fontFamily="@font/advent_pro_medium"
+                android:text="@string/five"
+                android:onClick="btn5"
+                android:background="@drawable/num_key"
+                app:layout_constraintBaseline_toBaselineOf="@+id/b4"
+                app:layout_constraintEnd_toStartOf="@+id/b6"
+                app:layout_constraintStart_toEndOf="@+id/b4" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/b6"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:fontFamily="@font/advent_pro_medium"
+                android:text="@string/six"
+                android:onClick="btn6"
+                android:background="@drawable/num_key"
+                app:layout_constraintBaseline_toBaselineOf="@+id/b5"
+                app:layout_constraintEnd_toStartOf="@+id/bsub"
+                app:layout_constraintStart_toEndOf="@+id/b5" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bsub"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/op_key"
+                android:fontFamily="@font/advent_pro_medium"
+                android:text="@string/sub"
+                android:onClick="btnSub"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/b6" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clRowFour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/clRowThree"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/b7"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:fontFamily="@font/advent_pro_medium"
+                android:text="@string/seven"
+                android:onClick="btn7"
+                android:background="@drawable/num_key"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/b8"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/b8"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:fontFamily="@font/advent_pro_medium"
+                android:text="@string/eight"
+                android:onClick="btn8"
+                android:background="@drawable/num_key"
+                app:layout_constraintBaseline_toBaselineOf="@+id/b7"
+                app:layout_constraintEnd_toStartOf="@+id/b9"
+                app:layout_constraintStart_toEndOf="@+id/b7" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/b9"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:fontFamily="@font/advent_pro_medium"
+                android:text="@string/nine"
+                android:onClick="btn9"
+                android:background="@drawable/num_key"
+                app:layout_constraintBaseline_toBaselineOf="@+id/b8"
+                app:layout_constraintEnd_toStartOf="@+id/bmul"
+                app:layout_constraintStart_toEndOf="@+id/b8" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bmul"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:fontFamily="@font/advent_pro_medium"
+                android:text="@string/mul"
+                android:onClick="btnMul"
+                android:background="@drawable/op_key"
+                app:layout_constraintBaseline_toBaselineOf="@+id/b9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/b9" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clRowFive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/clRowFour"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ballclear"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/op_key"
+                android:fontFamily="@font/advent_pro_medium"
+                android:text="@string/allClear"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:onClick="btnAllClear"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/bmod"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bmod"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:fontFamily="@font/advent_pro_medium"
+                android:text="@string/mod"
+                android:onClick="btnMod"
+                android:background="@drawable/op_key"
+                app:layout_constraintBaseline_toBaselineOf="@+id/ballclear"
+                app:layout_constraintEnd_toStartOf="@+id/bclear"
+                app:layout_constraintStart_toEndOf="@+id/ballclear" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bclear"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:fontFamily="@font/advent_pro_medium"
+                android:text="@string/clear"
+                android:onClick="btnClear"
+                android:background="@drawable/op_key"
+                app:layout_constraintBaseline_toBaselineOf="@+id/bmod"
+                app:layout_constraintEnd_toStartOf="@+id/bdiv"
+                app:layout_constraintStart_toEndOf="@+id/bmod" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bdiv"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/op_key"
+                android:fontFamily="@font/advent_pro_medium"
+                android:text="@string/div"
+                android:onClick="btnDiv"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/bclear" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:maxLines="1"
+        android:scrollbars="horizontal"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:fontFamily="@font/advent_pro_medium"
+        app:layout_constraintBottom_toTopOf="@+id/clKeybord"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_expression"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:fontFamily="@font/advent_pro_medium"
+        android:maxLines="2"
+        android:textAlignment="textEnd"
+        android:scrollbars="horizontal"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_result" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
